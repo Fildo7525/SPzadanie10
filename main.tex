@@ -67,8 +67,8 @@
 
 \clearpage
 
-\section{Pomôcky}
-\label{sec:pomocky}
+\section{Teória}
+\label{sec:teoria}
 
 V~tomto zadaní je našou úlohou experimentálne overiť návrh regulácie výšky hladiny na~laboratórnom
 modeli hydraulického systému a~overiť navrhované riešenie. Pri~tomto zadaní sme použili už~preddefinovanú schému
@@ -96,14 +96,26 @@ Vyššie spomenutý vzťah môžeme teda prepísať do tvaru:
 
 $$ G_R(s) = P  + \frac{1}{s}I + Ds $$
 
+Počas priebehu simulácie sa spomínaná žiadaná hodnota výšky hladiny mení. Priebeh zmien tejto veličiny je znázornený
+na obrázku Obr.~\ref{fig:ziadanaHodnota}. Hodnota žiadanej hodnoty postupne skokovo rastie po hodnotu 70 cm. Prvá
+žiadaná hodnota je nastavená na 10cm čas tejto časti simulácie je nastavený na 90 sekúnd. Druha žiadaná hodnota
+je nastavená na 30cm a jej čas na ustálenie hodnoty je 100 sekúnd. Každá ďalšia žiadaná hodnota výšky hladiny
+je rozdelená po 20cm segmentoch a doba počas ktorej sa má hodnota ustáliť je nastavená na 100 sekúnd. Po dosiahnutí
+najvyššej žiadanej hodnoty sa začne nádrž pomaly vypúšťať. Prvá časť je vypustenie nádrže na výsku hladiny 40 cm.
+Čas vypúšťania na túto hodnotu je nastavený taktiež na 100 sekúnd. Druha časť vypúšťania trvá taktiež 100 sekúnd
+a hodnota výšky hladiny je nastavená na 20 cm. V poslednej časti sa má nádrž úplne vypustiť. Koniec simulácie nastáva
+20 sekúnd po nastavení nulovej žiadanej hodnoty hladiny nádrže.
+
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[width=\textwidth]{./include/ziadana_hodnota.png}
-		\caption{Priebeh referenčnej teploty v~priebehu 1800 sekúnd.}
+		\caption{Priebeh referenčnej teploty v~priebehu 600 sekúnd.}
 		\label{fig:ziadanaHodnota}
 	\end{center}
 	\hfill
 \end{figure}
+
+\newpage
 
 \section{Merania}
 \label{sec:merania}
@@ -131,9 +143,7 @@ Výsledok simulácie môžeme vidieť na~obrázkoch
 
 % Priebeh teploty na~snímači \textit{T2} vidíme na~Obr.~\ref{fig:m1t2} a~priebeh výkonu výhrevnej špirály
 % môžeme vidieť na~obrázku Obr.~\ref{fig:m1u}. Spôsob správania výhrevnej špirály je opísaný v~zadaní.
-\ref{sec:zadanie}.
-
-\clearpage
+% \ref{sec:zadanie}.
 
 \subsection{Meranie 2}
 \label{sec:meranie2}
