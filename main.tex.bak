@@ -110,21 +110,16 @@ V~prvom zadaní sme zvolili hodnoty parametrov regulatora nasledovne: \textit{Kp
 
 \clearpage
 
-V~prvej časti merania (od~času 0s po~300s) máme žiadanú teplotu 28°C s ventilátorom zapnutým na~100\%.
-V~druhej časti merania (od~času 300s po~600s) máme žiadanú teplotu 31°C s ventilátorom zapnutým na~100\%.
-V~tretej časti merania (od~času 600s po~900s) máme žiadanú teplotu 31°C s ventilátorom zapnutým na~25\% a
-v~poslednej časti merania (od~času 900s po~1800s) má systém vertikálne investované správanie ako prvé
-dve časti merania. Systém ma žiadanú hodnotu teploty nastavenú na~31°C a~ventilátor je zapnutý na~100\%
-a~prechádza do~stavu, kde je žiadaná hodnota teploty 28°C a~ventilátor zostane zapnutý na~100\%.
 % Priebeh teploty na~snímači \textit{T2} vidíme na~Obr.~\ref{fig:m1t2} a~priebeh výkonu výhrevnej špirály
 % môžeme vidieť na~obrázku Obr.~\ref{fig:m1u}. Spôsob správania výhrevnej špirály je opísaný v~zadaní.
 \ref{sec:zadanie}.
 
 \clearpage
 
-\subsection{Hysteréza s hodnotou 0,5}
+\subsection{Meranie 2}
 \label{sec:meranie2}
 
+V druhom meraní sme si zvolili hodnoty \textit{Kp} 30, \textit{Ti} 20 \textit{Td} 0,1. výsledok simulácie môžeme vidieť na obrázkoch  .
 % \begin{figure}[!htbp]
 % 	\begin{center}
 % 		\includegraphics[width=\textwidth]{./include/m2T2.png}
@@ -143,13 +138,13 @@ a~prechádza do~stavu, kde je žiadaná hodnota teploty 28°C a~ventilátor zost
 % 	\label{fig:m2u}
 % \end{figure}
 
-V~druhom meraní máme zvolenú hodnotu hysterézy 0,5. Rozdelenie časti simulácie je rovnaké ako v~prvom meraní.
-Rozdiel nastáva v~responzívnosti systému na~zmenu teploty. V~druhom meraní je responzívnosť systému menšia
 % kvôli už~spomínanej vyššej hodnote hysterézy. Ako môžeme vidieť na~obrázku Obr.~\ref{fig:m2t2}, frekvencia
-meranej teploty na~snímači T2 je menšia a~zároveň aj~strmosť tejto zmeny je menšia.
 
-\subsection{Hysteréza s hodnotou 0,8}
+
+\subsection{Meranie 3}
 \label{sec:meranie3}
+
+V druhom meraní sme si zvolili hodnoty \textit{Kp} 50, \textit{Ti} 20 \textit{Td} 0,5. výsledok simulácie môžeme vidieť na obrázkoch  .
 
 % \begin{figure}[!htbp]
 % 	\begin{center}
@@ -169,21 +164,47 @@ meranej teploty na~snímači T2 je menšia a~zároveň aj~strmosť tejto zmeny j
 % 	\label{fig:m3u}
 % \end{figure}
 
-Tak isto ako pri~druhom meraní, frekvencia a~strmosť zmeny teploty T2 sa zmenšili kvôli zvýšeniu hodnoty hysterézy
 % čo~môžeme vidieť na~Obr.~\ref{fig:m3t2}. Preto sa aj~perióda zapínania výhrevnej špirály zmenšila ako môžeme vidieť
 % na~Obr.~\ref{fig:m3u}.
+
+\subsection{Meranie 4}
+\label{sec:meranie4}
+
+V druhom meraní sme si zvolili hodnoty \textit{Kp} 30, \textit{Ti} 10 \textit{Td} 0,5. výsledok simulácie môžeme vidieť na obrázkoch  .
+
+
+\clearpage
+
+\subsection{Meranie 5}
+\label{sec:meranie5}
+
+V druhom meraní sme si zvolili hodnoty \textit{Kp} 50, \textit{Ti} 20 \textit{Td} 0,5. výsledok simulácie môžeme vidieť na obrázkoch  .
+
+
+\clearpage
+
+\subsection{Meranie 6}
+\label{sec:meranie6}
+
+V druhom meraní sme si zvolili hodnoty \textit{Kp} 50, \textit{Ti} 20 \textit{Td} 0,5. výsledok simulácie môžeme vidieť na obrázkoch  .
+
+
+\clearpage
+
+\subsection{Meranie 7}
+\label{sec:meranie7}
+
+V druhom meraní sme si zvolili hodnoty \textit{Kp} 50, \textit{Ti} 20 \textit{Td} 0,5. výsledok simulácie môžeme vidieť na obrázkoch  .
+
+
+\clearpage
 
 \section{Zhrnutie}
 \label{sec:zhrnutie}
 
 % V~tomto zadaní sme zisťovali dôsledok zmeny hodnoty hysterézy na~teplotu T2. Na~obrázkoch Obr.~\ref{fig:m1t2},
 % Obr.~\ref{fig:m2t2}, Obr.~\ref{fig:m3t2} sme pozorovali nasledujúce správanie. Čím je hodnota hysterézy menšia,
-tým máme menšiu periódu zapínania, resp. vypínania ohrievacej špirály. Zároveň sme mohli vidieť zmenu strmosti
-zmeny teploty na~snímači T2. Túto strmosť a taktiež aj~frekvenciu ovplyvňuje aj~vypnutie ventilátora, čo~si môžeme
-všimnút v~čase od~600s po~900s na~každej simulácii v~už spomínaných obrázkoch. Hodnota hysterézy teda ovplyvňuje
-dvojpólovú reguláciu výstupnej teploty. ak~nám záleží na~najpresnejšom udržiavaní žiadanej hodnoty, tak~sa nám
-oplatí zvoliť si menšiu hodnotu hysterézy. Naopak ak~chceme dosiahnuť čo~najmešie zaťaženie ohrievacej špirály
-tak~je vhodné zvoliť si väčšiu hodnotu hysterézy.
+
 
 
 \end{document}
