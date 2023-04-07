@@ -91,10 +91,15 @@ Rovnako ako vstupný prietok je zadávaný v percentách. Hodnoty, ktoré sa bud
 $$ G_R(s) = K_P \left( 1 + \frac{1}{T_is} + T_ds \right) $$
 
 Proporcionálna zložka \textbf{P} regulátora je rovná zložke $K_P$, Integračná zložka \textbf{I} je počítaná vzťahom
-$\frac{K_P}{T_i}$, posledná derivačná zložka \textbf{D} regulátora je rovná $K_P T_d$.
+$\frac{K_P}{T_i}$, posledná derivačná zložka \textbf{D} regulátora je rovná $K_P T_d [-]$.
 Vyššie spomenutý vzťah môžeme teda prepísať do tvaru:
 
 $$ G_R(s) = P  + \frac{1}{s}I + Ds $$
+
+\clearpage
+
+\subsection{Úvod do priebehu simulácie}
+\label{subsec:priebehSimulacie}
 
 Počas priebehu simulácie sa spomínaná žiadaná hodnota výšky hladiny mení. Priebeh zmien tejto veličiny je znázornený
 na obrázku Obr.~\ref{fig:ziadanaHodnota}. Hodnota žiadanej hodnoty postupne skokovo rastie po hodnotu 70 cm. Prvá
@@ -123,92 +128,137 @@ a hodnota výšky hladiny je nastavená na 20 cm. V poslednej časti sa má nád
 \subsection{Meranie 1}
 \label{sec:meranie1}
 
-V~prvom zadaní sme zvolili hodnoty parametrov regulátora nasledovne:
+V~prvom zadaní sme zvolili prednastavené hodnoty parametrov regulátora. Tie sú zo zadania nastavené nasledovne:
 
 \begin{center}
 \begin{tabular}{ |c|c| }
  \hline
- $K_p$ & 15 \\
- $T_i$ & 20 \\
- $T_d$ & 0,05 \\
+ $K_p [-]$ & 15 \\
+ $T_i [-]$ & 20 \\
+ $T_d [-]$ & 0,05 \\
  \hline
 \end{tabular}
 \end{center}
 
-Výsledok simulácie môžeme vidieť na~obrázkoch
-% Obr.~\ref{fig:m1t2} a~Obr.~\ref{fig:m1u}.
+Výsledok simulácie môžeme vidieť na~obrázku Obr.~\ref{fig:m1}.
 
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.719\textwidth]{./include/meranie1.png}
+	\end{center}
+	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~prvom meraní [cm].}
+	\label{fig:m1}
+\end{figure}
+
+Toto nastavenie regulatorov
 
 \clearpage
-
-% Priebeh teploty na~snímači \textit{T2} vidíme na~Obr.~\ref{fig:m1t2} a~priebeh výkonu výhrevnej špirály
-% môžeme vidieť na~obrázku Obr.~\ref{fig:m1u}. Spôsob správania výhrevnej špirály je opísaný v~zadaní.
-% \ref{sec:zadanie}.
 
 \subsection{Meranie 2}
 \label{sec:meranie2}
 
-V druhom meraní sme si zvolili hodnoty \textit{Kp} 30, \textit{Ti} 20 \textit{Td} 0,1. výsledok simulácie môžeme vidieť na obrázkoch  .
-% \begin{figure}[!htbp]
-% 	\begin{center}
-% 		\includegraphics[width=\textwidth]{./include/m2T2.png}
-% 	\end{center}
-% 	\caption{Graf žiadanej a~meranej hodnoty teploty na~snímači T2 v~druhom meraní [°C].}
-% 	\label{fig:m2t2}
-% \end{figure}
+V druhom meraní sme si zvolili hodnoty:
+
+\begin{center}
+\begin{tabular}{ |c|c| }
+ \hline
+ $K_p [-]$ & 30 \\
+ $T_i [-]$ & 20 \\
+ $T_d [-]$ & 0,1 \\
+ \hline
+\end{tabular}
+\end{center}
+
+Výsledok simulácie môžeme vidieť na obrázku Obr.~\ref{fig:m1}.
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=\textwidth]{./include/meranie2.png}
+	\end{center}
+	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~druhom meraní [cm].}
+	\label{fig:m2}
+\end{figure}
 
 \clearpage
-
-% \begin{figure}[!htbp]
-% 	\begin{center}
-% 		\includegraphics[width=\textwidth]{./include/m2u.png}
-% 	\end{center}
-% 	\caption{Graf výkonu výhrevnej špirály v~druhom meraní [\%].}
-% 	\label{fig:m2u}
-% \end{figure}
-
-% kvôli už~spomínanej vyššej hodnote hysterézy. Ako môžeme vidieť na~obrázku Obr.~\ref{fig:m2t2}, frekvencia
-
 
 \subsection{Meranie 3}
 \label{sec:meranie3}
 
-V treťom meraní sme si zvolili hodnoty \textit{Kp} 50, \textit{Ti} 20 \textit{Td} 0,5. výsledok simulácie môžeme vidieť na obrázkoch  .
+V treťom meraní sme si zvolili hodnoty: 
 
-% \begin{figure}[!htbp]
-% 	\begin{center}
-% 		\includegraphics[width=\textwidth]{./include/m3T2.png}
-% 	\end{center}
-% 	\caption{Graf žiadanej a~meranej hodnoty teploty na~snímači T2 v~treťom meraní [°C].}
-% 	\label{fig:m3t2}
-% \end{figure}
+\begin{center}
+\begin{tabular}{ |c|c| }
+ \hline
+ $K_p [-]$ & 50 \\
+ $T_i [-]$ & 20 \\
+ $T_d [-]$ & 0,5 \\
+ \hline
+\end{tabular}
+\end{center}
+
+Výsledok simulácie môžeme vidieť na obrázkoch  .
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=\textwidth]{./include/meranie3.png}
+	\end{center}
+	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~treťom meraní [cm].}
+	\label{fig:m3}
+\end{figure}
 
 \clearpage
-
-% \begin{figure}[!htbp]
-% 	\begin{center}
-% 		\includegraphics[width=\textwidth]{./include/m3u.png}
-% 	\end{center}
-% 	\caption{Graf výkonu výhrevnej špirály v~treťom meraní [\%].}
-% 	\label{fig:m3u}
-% \end{figure}
-
-% čo~môžeme vidieť na~Obr.~\ref{fig:m3t2}. Preto sa aj~perióda zapínania výhrevnej špirály zmenšila ako môžeme vidieť
-% na~Obr.~\ref{fig:m3u}.
 
 \subsection{Meranie 4}
 \label{sec:meranie4}
 
-V štvrtom meraní sme si zvolili hodnoty \textit{Kp} 30, \textit{Ti} 10 \textit{Td} 0,1. výsledok simulácie môžeme vidieť na obrázkoch  .
+V štvrtom meraní sme si zvolili hodnoty. 
 
+\begin{center}
+\begin{tabular}{ |c|c| }
+ \hline
+ $K_p [-]$ & 20 \\
+ $T_i [-]$ & 10 \\
+ $T_d [-]$ & 0,1 \\
+ \hline
+\end{tabular}
+\end{center}
+
+Výsledok simulácie môžeme vidieť na obrázkoch  .
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=\textwidth]{./include/meranie4.png}
+	\end{center}
+	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~štvrtom meraní [cm].}
+	\label{fig:m4}
+\end{figure}
 
 \clearpage
 
 \subsection{Meranie 5}
 \label{sec:meranie5}
 
-V piatom meraní sme si zvolili hodnoty \textit{Kp} 50, \textit{Ti} 20 \textit{Td} 0,1. výsledok simulácie môžeme vidieť na obrázkoch  .
+V piatom meraní sme si zvolili hodnoty. 
 
+\begin{center}
+\begin{tabular}{ |c|c| }
+ \hline
+ $K_p [-]$ & 50 \\
+ $T_i [-]$ & 20 \\
+ $T_d [-]$ & 0,1 \\
+ \hline
+\end{tabular}
+\end{center}
+
+Výsledok simulácie môžeme vidieť na obrázkoch  .
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=\textwidth]{./include/meranie5.png}
+	\end{center}
+	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~piatom meraní [cm].}
+	\label{fig:m5}
+\end{figure}
 
 \clearpage
 
@@ -218,6 +268,28 @@ V piatom meraní sme si zvolili hodnoty \textit{Kp} 50, \textit{Ti} 20 \textit{T
 V šiestom meraní sme si zmenili hodnotu uzatvorenia výpustného ventilu zo 70\% na 50 \%, hodnoty
 \textit{Kp}, \textit{Ti} a \textit{Td} sme ponechali rovnaké. Výsledok simulácie môžeme vidieť na obrázkoch.
 
+\begin{center}
+\begin{tabular}{ |c|c| }
+ \hline
+ $K_p [-]$ & 15 \\
+ $T_i [-]$ & 20 \\
+ $T_d [-]$ & 0,05 \\
+ \hline
+ $Vstupny\_ventil[\%]$ & 100 \\
+ $Vystupny\_ventil[\%]$ & 50 \\
+ \hline
+\end{tabular}
+\end{center}
+
+Výsledok simulácie môžeme vidieť na obrázkoch  .
+
+% \begin{figure}[!htbp]
+% 	\begin{center}
+% 		\includegraphics[width=\textwidth]{./include/meranie6.png}
+% 	\end{center}
+	% \caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~šiestom meraní [cm].}
+% 	\label{fig:m5}
+% \end{figure}
 
 \clearpage
 
@@ -226,6 +298,30 @@ V šiestom meraní sme si zmenili hodnotu uzatvorenia výpustného ventilu zo 70
 
 V siedmom meraní sme si zmenili hodnotu uzatvorenia výpustného ventilu z 50\% na 80 \%, hodnoty
 \textit{Kp}, \textit{Ti} a \textit{Td} sme ponechali rovnaké. Výsledok simulácie môžeme vidieť na obrázkoch.
+
+\begin{center}
+\begin{tabular}{ |c|c| }
+ \hline
+ $K_p [-]$ & 15 \\
+ $T_i [-]$ & 20 \\
+ $T_d [-]$ & 0,05 \\
+ \hline
+ $Vstupny\_ventil[\%]$ & 100 \\
+ $Vystupny\_ventil[\%]$ & 80 \\
+ \hline
+\end{tabular}
+\end{center}
+
+Výsledok simulácie môžeme vidieť na obrázkoch  .
+Výsledok simulácie môžeme vidieť na obrázkoch  .
+
+% \begin{figure}[!htbp]
+% 	\begin{center}
+% 		\includegraphics[width=\textwidth]{./include/meranie7.png}
+% 	\end{center}
+	% \caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~siedmom meraní [cm].}
+% 	\label{fig:m7}
+% \end{figure}
 
 
 \clearpage
