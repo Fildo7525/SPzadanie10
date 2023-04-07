@@ -144,13 +144,20 @@ Výsledok simulácie môžeme vidieť na~obrázku Obr.~\ref{fig:m1}.
 
 \begin{figure}[!htbp]
 	\begin{center}
-		\includegraphics[width=0.719\textwidth]{./include/meranie1.png}
+		\includegraphics[width=\textwidth]{./include/meranie1.png}
 	\end{center}
 	\caption{Graf žiadanej a~meranej hodnoty výšky hladiny na~snímači v~prvom meraní [cm].}
 	\label{fig:m1}
 \end{figure}
 
-Toto nastavenie regulatorov
+Toto nastavenie regulátorov ovplyvnilo okolie, v ktorom sme nastavovali hodnoty v ďalších meraniach. Po zistení
+priebehu výstupného signálu zobrazeného na Obr.~\ref{fig:m1} sme sa snažili dosiahnuť čo najrýchlejšiu reguláciu
+výstupného signálu zo systému. Na dosiahnutie tohto cieľu sme zväčšili derivačnú zložku regulátora.
+Tá zabezpečuje najrýchlejšiu odpoveď regulátora na zmenu výstupného signálu. Táto zložka zároveň zavádza šum
+do akčného zásahu systému. Ďalšia zložka, ktorá zabezpečuje postupný rast akčného zásahu systému je integračná
+zložka. Tá sa skladá ako bolo spomenutý v sekcii~\ref{sec:teoria} z parametrov $K_p$ a $T_i$. Pričom táto zložka
+priamo úmerne závisí od zložky $K_p$ a nepriamo od $T_i$. Zmenu, ktorú sme vykonali bola zmena parametru
+zosilnenia regulátora $K_p$.
 
 \clearpage
 
@@ -159,6 +166,7 @@ Toto nastavenie regulatorov
 
 V druhom meraní sme si zvolili hodnoty:
 Výsledok simulácie môžeme vidieť na obrázku Obr.~\ref{fig:m1}.
+
 \begin{center}
 \begin{tabular}{ |c|c| }
  \hline
@@ -295,7 +303,7 @@ Výsledok simulácie môžeme vidieť na obrázkoch  .
 \clearpage
 
 \subsection{Meranie 7}
-\label{sec:meranie6}
+\label{sec:meranie7}
 
 V siedmom meraní sme si zmenili hodnotu uzatvorenia výpustného ventilu z 50\% na 80 \%, hodnoty
 \textit{Kp}, \textit{Ti} a \textit{Td} sme ponechali rovnaké. Výsledok simulácie môžeme vidieť na Obr.~\ref{fig:m7}.
