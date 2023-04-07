@@ -6,6 +6,7 @@
 \usepackage[slovak]{babel}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{tabto}
 
 \graphicspath{./include/}
 
@@ -150,7 +151,6 @@ Výsledok simulácie môžeme vidieť na~obrázku Obr.~\ref{fig:m1}.
 	\label{fig:m1}
 \end{figure}
 
-Toto nastavenie regulatorov
 
 \clearpage
 
@@ -328,8 +328,15 @@ V siedmom meraní sme si zmenili hodnotu uzatvorenia výpustného ventilu z 50\%
 \section{Zhrnutie}
 \label{sec:zhrnutie}
 
-% V~tomto zadaní sme zisťovali dôsledok zmeny hodnoty hysterézy na~teplotu T2. Na~obrázkoch Obr.~\ref{fig:m1t2},
-% Obr.~\ref{fig:m2t2}, Obr.~\ref{fig:m3t2} sme pozorovali nasledujúce správanie. Čím je hodnota hysterézy menšia,
+\tab V tomto zadaní sme sledovali ako vplíva PID regulátor, prítok a odtok vodny v nádrži. 
+Prvé meranie sme uskutočnili s prednastavenými hodnotami ktoré môžeme vidieť v tabuľke \ref{sec:meranie1}, 
+ako môžme vidieť na Obr.\ref{fig:m1} pri vypúštaní je nedostatočné regulovanie a výska hladiny výrazne klesne pod požadovanú hodnotu.  
+\\
+\tab
+Toto sme sa pokúsili eliminovať v ďaľšom meraní \ref{sec:meranie2} zvýšením hodnoty $K_p$ na 30 a $T_d$ na 0.1, čo nám celkom dobre pomohlo a ako môžme vidieť na Obr. \ref{fig:m2} hladina vody už neklesá tak výrazne pod požadovanú hodnotu. 
+\\
+\tab 
+Keďže toto malo pozitívny vplyv na systém v daľšom meraní sme zase tieto hodnoty trochu zvýšili.
 
 
 
