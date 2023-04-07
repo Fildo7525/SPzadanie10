@@ -6,7 +6,6 @@
 \usepackage[slovak]{babel}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{tabto}
 
 \graphicspath{./include/}
 
@@ -366,15 +365,17 @@ vody z nádrže.
 \label{sec:zhrnutie}
 
 
-\tab V tomto zadaní sme sledovali ako vplíva PID regulátor, prítok a odtok vodny v nádrži. 
-Prvé meranie sme uskutočnili s prednastavenými hodnotami ktoré môžeme vidieť v tabuľke \ref{sec:meranie1}, 
-ako môžme vidieť na Obr.\ref{fig:m1} pri vypúštaní je nedostatočné regulovanie a výska hladiny výrazne klesne pod požadovanú hodnotu.  
-\\
-\tab
-Toto sme sa pokúsili eliminovať v ďaľšom meraní \ref{sec:meranie2} zvýšením hodnoty $K_p$ na 30 a $T_d$ na 0.1, čo nám celkom dobre pomohlo a ako môžme vidieť na Obr. \ref{fig:m2} hladina vody už neklesá tak výrazne pod požadovanú hodnotu. 
-\\
-\tab 
-Keďže toto malo pozitívny vplyv na systém v daľšom meraní sme zase tieto hodnoty trochu zvýšili.
+Môžeme si všimnúť, že pri základných hodnotách prítoku a odtoku zmena PID regulátora pomocou zmeny $K_p$, $T_i$ a $T_d$ má minimálny vplyv na rýchlosť napúštania a vypúštania nádrže. Môžeme tým hlavne ovplyvňovať stabilitu vodnej hladniny na požadovanej hodnote. 
+
+Pri takto navrhnutom systéme môžme PID regulátorom ovplyvniť stromsť napúštania a vypúštania iba do určitej miery lebo je limitovaná zvoleným ventilom. Ako môžeme vidieť v meraní v sekcii \ref{sec:meranie6} znížením rýchlosti odtoku sa nám síce podarilo zlepšiť rýchlosť napúštania nádrže ale od času 400s systém nestíhal vypúštať vodu na požadovanú hodnotu. Naopak v poslednom meraní v sekcii \ref{sec:meranie7} môžeme vidieť, že zvýšenie odtoku spôsobilo to, že síce vieme rýchlejšie vypúštať vodu ale systém mal probem s napúštaním, hlavne v čase od 300s po 400s kedy je hladina vody najvyššia.
+
+% \tab V tomto zadaní sme sledovali ako vplíva PID regulátor, prítok a odtok vodny v nádrži. 
+% Prvé meranie sme uskutočnili s prednastavenými hodnotami ktoré môžeme vidieť v tabuľke \ref{sec:meranie1}, 
+% ako môžme vidieť na Obr.\ref{fig:m1} pri vypúštaní je nedostatočné regulovanie a výska hladiny výrazne klesne pod požadovanú hodnotu.  
+
+% Toto sme sa pokúsili eliminovať v ďaľšom meraní \ref{sec:meranie2} zvýšením hodnoty $K_p$ na 30 a $T_d$ na 0.1, čo nám celkom dobre pomohlo a ako môžme vidieť na Obr. \ref{fig:m2} hladina vody už neklesá tak výrazne pod požadovanú hodnotu. 
+
+% Keďže toto malo pozitívny vplyv na systém v daľšom meraní sme zase tieto hodnoty trochu zvýšili.
 
 
 \end{document}
